@@ -13,12 +13,11 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int index;
-	int hap = 0;
 
 	if (*needle == 0)
 		return (haystack);
 
-	while (haystack[hap] != '\0')
+	while (*haystack)
 	{
 		index = 0;
 
@@ -34,7 +33,7 @@ char *_strstr(char *haystack, char *needle)
 			}
 		}
 
-		hap++;
+		haystack++;
 	}
 
 	return ('\0');
